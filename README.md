@@ -27,3 +27,7 @@ In dev mode project mode project will be run on http://localhost:4200
 5. Run `npm run test` to run test cases
 
 In prod mode project will be run on http://localhost:3000
+
+Deployed on AWS:
+
+http://ec2-13-237-198-132.ap-southeast-2.compute.amazonaws.com:3000/
