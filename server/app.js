@@ -25,7 +25,11 @@ const runServer = () => {
 
 app.use(allowCrosOriginAccess);
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/api',routes);
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use('/api', routes);
 app.use(express.static(__dirname + '/public'));
 runServer();
+
+module.exports = app; // for testing
