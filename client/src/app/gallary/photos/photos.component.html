@@ -1,0 +1,19 @@
+<div class="ng-cloak">
+  <div class='container'>
+
+    <div class="btn-container">
+      <div class='form-group search-input'>
+        <input type="text" id="usr" required [(ngModel)]="search" id="name" placeholder="Search by ID/Title">
+        <button type="button" ngClass="margin-left-5px" (click)="fetchPhotos()" class="btn btn-success">Submit</button>
+      </div>
+      <div class='list-grid-view'>
+        <button class="btn btn-primary" (click)="toggalGridView()">Grid</button>
+        <!-- On click change "$scope.layout = grid" and if layout=='grid' add class 'active' to self-->
+        <button class="btn btn-primary margin-left-5px" (click)="toggalListView()">List</button>
+      </div>
+    </div>
+
+    <app-grid [hidden]="!gridview" [search]="search"></app-grid>
+    <app-list [hidden]="!listview" [search]="search"></app-list>
+  </div>
+</div>
